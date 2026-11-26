@@ -7,6 +7,13 @@ import styles from './Notice.module.css'
  * @param {React.ReactNode} props.children - the text of the notice
  */
 export default function Notice({ type, children }) {
-  // TODO
-  return null
+  const noticeClassName = [styles.notice, styles[type] ?? '']
+    .filter(Boolean)
+    .join(' ')
+
+  return (
+    <div className={noticeClassName} role="status">
+      {children}
+    </div>
+  )
 }

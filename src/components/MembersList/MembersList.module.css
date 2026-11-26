@@ -2,18 +2,27 @@
    Use them in MembersList.jsx: className={styles.membersList}
    Don't delete the classes marked "REQUIRED BY THE TESTS". */
 
-/* REQUIRED BY THE TESTS: the element that wraps all the cards */
 .membersList {
+  width: 95%;
+  margin: 16px auto;
+  gap: 12px;
 }
 
-/* REQUIRED BY THE TESTS: list layout - one card under the other */
+/* REQUIRED BY THE TESTS: list layout */
 .list {
+  display: flex;
+  flex-direction: column;
 }
 
-/* REQUIRED BY THE TESTS: grid layout - cards in columns */
+/* REQUIRED BY THE TESTS: grid layout */
 .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
 }
 
-/* the message "No members to show" */
 .empty {
+  width: 95%;
+  margin: 16px auto;
+  text-align: center;
+  color: #6b7280;
 }

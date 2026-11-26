@@ -4,40 +4,103 @@
 
 /* the card - border, padding, shadow */
 .card {
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  box-sizing: border-box;
+  min-width: 0;
+  background-color: white;
+  cursor: pointer;
 }
 
 /* REQUIRED BY THE TESTS: the card of the selected member */
 .selected {
+  border-color: #3b82f6;
+  box-shadow:
+    0 0 0 2px rgba(59, 130, 246, 0.25),
+    0 0 18px rgba(59, 130, 246, 0.55);
 }
 
 /* REQUIRED BY THE TESTS: an inactive member - the card looks faded */
 .inactive {
+  opacity: 0.55;
+  filter: grayscale(20%);
 }
 
 /* a circle with the initials, same size for all */
 .avatar {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 50%;
+  background-color: rgb(201, 201, 248);
+  color: rgb(41, 41, 139);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nameRole {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  min-width: 0;
 }
 
 /* the member name */
 .name {
+  font-weight: bold;
 }
 
 /* the role badge */
 .badge {
+  border-radius: 10px;
+  background-color: rgb(235, 235, 235);
+  padding: 2px 8px;
+  font-weight: 500;
+  font-size: 12px;
+  display: inline-block;
 }
 
 /* the small action button (disabled -> faded, no hover effect) */
 .roleButton {
+  margin-left: auto;
+  border: 0;
+  padding: 6px 12px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+}
+
+.roleButton:hover:not(:disabled) {
+  filter: brightness(0.95);
+}
+
+.roleButton:disabled {
+  opacity: 0.5;
+  filter: none;
+  cursor: not-allowed;
 }
 
 /* REQUIRED BY THE TESTS: the button of a Leader - blue */
 .leader {
+  background-color: rgb(70, 70, 255);
 }
 
 /* REQUIRED BY THE TESTS: the button of a Member - green */
 .member {
+  background-color: rgb(3, 125, 33);
 }
 
 /* REQUIRED BY THE TESTS: the button of a Guest - purple */
 .guest {
+  background-color: rgb(129, 32, 199);
 }

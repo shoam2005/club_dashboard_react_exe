@@ -4,18 +4,46 @@
 
 /* the whole bar */
 .filterBar {
+  width: 95%;
+  padding: 10px 14px;
+  margin: 0 auto;
+  border: 0;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background-color: white;
 }
 
 /* the <label> with the checkbox */
 .toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
 }
 
 /* the wrapper of the List / Grid buttons */
 .layoutSwitch {
+  padding: 6px 14px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.buttons {
+  display: inline-flex;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 /* REQUIRED BY THE TESTS: the button of the current layout */
 .active {
+  background-color: black;
+  color: white;
 }
 
 /* bonus: the search input */
